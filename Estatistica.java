@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Estatistica {
     public static void main(String[] args) {
@@ -27,7 +26,6 @@ public class Estatistica {
             if (num > max) max = num;
         }
         double media = soma / numeros.size();
-
         double moda = numeros.get(0);
         int maiorFrequencia = 0;
         for (double candidato : numeros) {
@@ -48,10 +46,11 @@ public class Estatistica {
         }
         double desvioPadrao = Math.sqrt(somaQuadrados / numeros.size());
 
-        System.out.printf("Média: %.2f%n", media);
-        System.out.printf("Moda: %.2f%n", moda);
-        System.out.printf("Mínimo: %.2f%n", min);
-        System.out.printf("Máximo: %.2f%n", max);
-        System.out.printf("Desvio padrão: %.3f%n", desvioPadrao);
+        System.out.printf("Média = %d%n", Math.round(media));
+        System.out.printf("Moda = %d%n", Math.round(moda));
+        System.out.printf("Mínimo = %d%n", Math.round(min));
+        System.out.printf("Máximo = %d%n", Math.round(max));
+        System.out.printf("Desvio padrão = %.3f%n", desvioPadrao);;
+
     }
 }
